@@ -21,5 +21,7 @@ int main() {
   cout << "Input string is :" << s7 << "\n";
   cout << "size is :" << s7.size() << "\n";
   cout << "the first char is :" << s7[0] << endl;
+  auto size8 = s7.size();
+  cout << "auto size is :" << size8 <<  endl;
   return 10;
 }
