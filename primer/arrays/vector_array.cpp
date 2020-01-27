@@ -8,5 +8,14 @@ int main () {
     cout << c << " ";
   }
   cout << endl;
+  int bb[7];
+  size_t i = 0;
+  for (auto c : b) {
+    bb[i++] = c;
+  }
+  for (auto c : bb) {
+    cout << c << " ";
+  }
+  cout << endl;
   return 0;
 }
