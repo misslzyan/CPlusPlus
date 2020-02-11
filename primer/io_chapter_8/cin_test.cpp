@@ -9,4 +9,7 @@ int main () {
   cout << old_state << "\n";
   cout << cin.rdstate() << "\n";
   cin.setstate(old_state); 
+  while(cin>>i){
+    cout << i << endl;
+  }
 }
