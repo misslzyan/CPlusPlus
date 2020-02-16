@@ -3,6 +3,15 @@
 #include <vector>
 #include <sstream>
 
+bool isShorter(const std::string &word1, const std::string &word2) {
+  auto s1 = word1.size();
+  auto s2 = word2.size();
+  if(s1 == s2) {
+    return word1<word2;
+  }
+  return word1.size() < word2.size();
+}
+
 void elimitWords(std::vector<std::string> &words) {
   std::sort(words.begin(), words.end());
   auto beginToErase = std::unique(words.begin(), words.end());
@@ -25,6 +34,18 @@ int main () {
   std::cout << "\n";
   for(auto w : words) {
     std::cout << w << " ";
+  }
+  std::cout << "\n";
+  
+  std::sort(words.begin(), words.end(), isShorter);
+  for(auto c : words) {
+    std::cout << c << " ";
+  }
+
+  std::cout << "\n";
+  std::stable_sort(words.begin(), words.end(), isShorter);
+  for (const auto &c: words) {
+    std::cout << c << " ";
   }
   std::cout << "\n";
   return 0;
