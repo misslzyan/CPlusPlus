@@ -51,5 +51,6 @@ std::string & StrBlob::back() {
 int main() {
   StrBlob blob = {"1", "2", "23"};
   auto b = blob;
-  std::cout << b.front() << "\n";
+  blob.push_back("aa");
+  std::cout << b.back() << "\n";
 }
